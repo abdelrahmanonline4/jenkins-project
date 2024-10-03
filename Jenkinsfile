@@ -47,6 +47,7 @@ pipeline {
                     echo "Applying Kubernetes configuration..."
                     kubectl apply -f k8s/deployment.yaml -n ${K8S_NAMESPACE}
                     kubectl apply -f k8s/service.yaml -n ${K8S_NAMESPACE}
+                    ./apply-k8s.sh
                     """
                 }
             }
